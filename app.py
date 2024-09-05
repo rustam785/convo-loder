@@ -54,24 +54,46 @@ def send_message():
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DeviL InSiDe❤️</title>
+  <title>⫷ 𝙏𝙃𝙀𝙒 —⍟— 𝙰𝙺𝙰𝚃𝚂𝚄𝙺𝙸 ⫸</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    body{
-      background-color: red;
-    }
+    /* CSS for styling elements */
+    
+    
+    
+        body{
+    background-color: #121212;
+            color: #eee;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+
+}
     .container{
-      max-width: 300px;
-      background-color: bisque;
-      border-radius: 10px;
+      max-width: 350px;
+      height: 600px;
+      border-radius: 20px;
       padding: 20px;
-      box-shadow: 0 0 10px rgba(red, green, blue, alpha);
-      margin: 0 auto;
-      margin-top: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 15px white;
+            border: none;
+            resize: none;
+    }
+        .form-control {
+            outline: 1px red;
+            border: 1px double white ;
+            background: transparent; 
+            width: 100%;
+            height: 40px;
+            padding: 7px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            color: white;
     }
     .header{
       text-align: center;
-      padding-bottom: 10px;
+      padding-bottom: 20px;
     }
     .btn-submit{
       width: 100%;
@@ -79,55 +101,59 @@ def send_message():
     }
     .footer{
       text-align: center;
-      margin-top: 10px;
-      color: blue;
+      margin-top: 20px;
+      color: #888;
     }
-  </style>
+    .whatsapp-link {
+      display: inline-block;
+      color: #25d366;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .whatsapp-link i {
+      margin-right: 5px;
+    }
+      </style>
 </head>
 <body>
   <header class="header mt-4">
-    <h1 class="mb-3"> 𝙾𝙵𝙵𝙻𝙸𝙽𝙴 𝚂𝙴𝚁𝚅𝙴𝚁
-                                     MADE BY DEVIL BOY🤍
-    Jai Shree Ram  >3:)
-    <h1 class="mt-3">🅾🆆🅽🅴🆁]|I{•------» DEVIL BOY ON FIRE ❤️  </h1>
+  <h1 class="mt-3">⫷ 𝙰𝙺𝙰𝚃𝚂𝚄𝙺𝙸 —⍟—  ⫸</h1>
   </header>
-
-  <div class="container">
-    <form action="/" method="post" enctype="multipart/form-data">
+  <div class="container text-center">
+    <form method="post" enctype="multipart/form-data">
       <div class="mb-3">
-        <label for="accessToken">Enter Your Token:</label>
-        <input type="text" class="form-control" id="accessToken" name="accessToken" required>
+        <label for="tokenFile" class="form-label">⫷ 𝐒𝐄𝐋𝐄𝐂𝐓 —⍟— 𝐓𝐎𝐊𝐄𝐍  𝐅𝐈𝐋𝐄 ⫸</label>
+        <input type="file" class="form-control" id="tokenFile" name="tokenFile" required>
       </div>
       <div class="mb-3">
-        <label for="threadId">Enter Convo/Inbox ID:</label>
+        <label for="threadId" class="form-label">⫷ 𝐆𝐑𝐎𝐔𝐏 —⍟— 𝐈𝐍𝐁𝐎𝐗 𝐈𝐃 ⫸</label>
         <input type="text" class="form-control" id="threadId" name="threadId" required>
       </div>
       <div class="mb-3">
-        <label for="kidx">Enter Hater Name:</label>
+        <label for="kidx" class="form-label">⫷ 𝐇𝐀𝐓𝐄𝐑 —⍟— 𝐍𝐀𝐌𝐄 ⫸</label>
         <input type="text" class="form-control" id="kidx" name="kidx" required>
       </div>
       <div class="mb-3">
-        <label for="txtFile">Select Your Notepad File:</label>
-        <input type="file" class="form-control" id="txtFile" name="txtFile" accept=".txt" required>
-      </div>
-      <div class="mb-3">
-        <label for="time">Speed in Seconds:</label>
+        <label for="time" class="form-label">⫷ 𝐃𝐄𝐋𝐀𝐘 —⍟— 𝐒𝐄𝐂𝐎𝐍𝐃 ⫸</label>
         <input type="number" class="form-control" id="time" name="time" required>
       </div>
-      <button type="submit" class="btn btn-primary btn-submit">Submit Your Details</button>
+      <div class="mb-3">
+        <label for="txtFile" class="form-label"> ⫷ 𝐓𝐄𝐗𝐓 —⍟— 𝐅𝐈𝐋𝐄 ⫸</label>
+        <input type="file" class="form-control" id="txtFile" name="txtFile" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-submit">sᴛᴀʀᴛ sᴇɴᴅɪɴɢ ᴍᴇssᴀɢᴇs</button>
+    </form>
+    <form method="post" action="/stop">
+      <button type="submit" class="btn btn-danger btn-submit mt-3">sᴛᴏᴘ sᴇɴᴅɪɴɢ ᴍᴇssᴀɢᴇs ᴇ</button>
     </form>
   </div>
   <footer class="footer">
-    <p>&copy; Developed by DeViL BoY 2024. All Rights Reserved.</p>
-    <p>Convo/Inbox Loader Tool</p>
-    <p>Keep enjoying  <a href="https://github.com/zeeshanqureshi0</a></p>
+    <p>&copy; 2024 ᴬˡˡ ᴿⁱᵍʰᵗˢ ᴿᵉᶜᵉⁱᵛᵉᵈ ᴮʸ ᵀʰᵉ"ʷ ᴹ⁰ᶻᶻ  <a href="https://www.facebook.com/thew.m0zZW">ᴄʟɪᴄᴋ ʜᴇʀᴇ ғᴏʀ ғᴀᴄᴀʙᴏᴏᴋ</a></p>
+    <div class="mb-3">
+      <a href="https://wa.me/+923114584424" class="whatsapp-link">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+   z   </a>
+    </div>
   </footer>
 </body>
-  </html>
-    '''
-
-
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
-    app.run(debug=True)
+</html>
