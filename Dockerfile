@@ -1,18 +1,14 @@
-
-# Use an official Python 3.9 runtime as a parent image
-FROM python:3.9-slim
+# Use the official Python image as the base image
+FROM python:3.8
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+# Copy the application files into the working directory
 COPY . /app
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+# Install the application dependencies
+RUN pip install -r requirements.txt
 
-# Expose the port that your app runs on
-EXPOSE 8000
-
-# Command to run the application
-CMD ["python", "app.py"]
+# Define the entry point for the container
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
