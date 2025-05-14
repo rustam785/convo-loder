@@ -1,14 +1,20 @@
-# Use the official Python image as the base image
-FROM python:3.8
+# Use official Node.js image
+FROM node:18
 
-# Set the working directory in the container
+# Set working directory
 WORKDIR /app
 
-# Copy the application files into the working directory
-COPY . /app
+# Copy package.json and package-lock.json
+COPY package*.json ./
 
-# Install the application dependencies
-RUN pip install -r requirements.txt
+# Install dependencies
+RUN npm install
 
-# Define the entry point for the container
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# Copy the rest of the app
+COPY . .
+
+# Expose the port the app runs on
+EXPOSE 1337
+
+# Start the server
+CMD ["npm", "start"]
